@@ -4,6 +4,7 @@ Additional installed tools:
 
 * bzip2
 * curl
+* docker
 * gnupg
 * gzip
 * tar

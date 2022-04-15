@@ -19,6 +19,10 @@ RUN microdnf install \
 
 RUN gu install native-image
 
+RUN curl -f -L -o - https://download.docker.com/linux/static/stable/x86_64/docker-20.10.14.tgz |\
+    tar -C /opt/ -xzf - && \
+    ln -s /opt/docker/docker /usr/local/bin/docker
+
 RUN curl -f -L -o - https://dlcdn.apache.org/maven/maven-3/3.8.5/binaries/apache-maven-3.8.5-bin.tar.gz | \
     tar -C /opt -xzf - && \
     ln -s /opt/apache-maven-3.8.5/bin/mvn /usr/local/bin/mvn
